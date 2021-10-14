@@ -6,14 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--Añadimos dos botones y les aplicamos restricciones,
+    el boton 1 sólo se puede mover de derecha a izquierda,
+    no puede estar encima de la imagen, el boton 2 sólo se puede mover de arriba a abajo nunca a la
+    derecha de la imagen-->
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="365dp"
-        android:layout_height="240dp"
+        android:layout_width="111dp"
+        android:layout_height="101dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="212dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="96dp"
+        android:text="Boton1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="239dp"
+        android:text="Boton2"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
