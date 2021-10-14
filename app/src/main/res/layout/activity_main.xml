@@ -6,29 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--Añadimos dos botones y les aplicamos restricciones,
-    el boton 1 sólo se puede mover de derecha a izquierda,
-    no puede estar encima de la imagen, el boton 2 sólo se puede mover de arriba a abajo nunca a la
-    derecha de la imagen-->
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="362dp"
+        android:layout_height="284dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-    <!--El texto del boton2 debe estar alineado con el texto del boton 1 por la restricción de base-->
-    <Button
-        android:id="@+id/button"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginBottom="412dp"
-        android:text="Boton1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="104dp"
-        android:text="Boton2"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
